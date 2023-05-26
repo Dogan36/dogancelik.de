@@ -1,12 +1,12 @@
-<header>
-<img *ngIf="!darkMode" routerLink="/" src="src/assets/img/dc-low-resolution-logo-white-on-transparent-background.png" alt="">
-<img *ngIf="darkMode" routerLink="/" src="src/assets/img/dc-low-resolution-logo-color-on-transparent-background.png" alt="">
+<header [class.headerDark]="darkMode">
+
+    <img *ngIf="!darkMode" routerLink="/" src="assets/img/logo-no-background.svg" alt="">
+    <img *ngIf="darkMode" routerLink="/" src="assets/img/logo-white.svg" alt="">
 
 
-<div>
-    <a routerLink="/">Home</a>
-    <a href="#">Curriculum</a>
-    <a href="#">Projekte</a>
-    <a routerLink="/imprint">Impressum</a>
-</div>
+    <div [class.darkLinks]="darkMode">
+        <a routerLink="/">Home</a>
+        <a routerLink="/data-protection">Data protection</a>
+        <a routerLink="/imprint">Impressum</a>
+    </div>
 </header>
